@@ -608,7 +608,10 @@ MonoBehaviour:
   playerInput: {fileID: 1665997335}
   playerTransform: {fileID: 1665997333}
   speed: 5
-  seed: {fileID: 11400000, guid: 5d14387ab26aa354c8839b92d4ad7acc, type: 2}
+  startSeeds:
+  - {fileID: 11400000, guid: 5d14387ab26aa354c8839b92d4ad7acc, type: 2}
+  - {fileID: 11400000, guid: d8eea7a25debfc74ebfa0de33cb52dab, type: 2}
+  - {fileID: 11400000, guid: d8eea7a25debfc74ebfa0de33cb52dab, type: 2}
 --- !u!114 &1665997335
 MonoBehaviour:
   m_ObjectHideFlags: 0

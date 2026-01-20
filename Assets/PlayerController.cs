@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float speed = 1f;
+    [SerializeField] private InventoryDisplayController inventoryDisplayController;
 
     [SerializeField] private List<Seed> startSeeds;
 
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         seeds = new List<Seed>(startSeeds);
+        inventoryDisplayController.UpdateItemImages(seeds);
         selectionIndex = 0;
     }
 
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
                         seeds.RemoveAt(selectionIndex);
                         if (selectionIndex != 0)
                             selectionIndex--;
+                        inventoryDisplayController.UpdateItemImages(seeds);
                     }
                 }
                 else if (plantation.IsReadyToHarvert)
@@ -63,8 +66,5 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        
-
-        
     }
 }
